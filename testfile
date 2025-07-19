@@ -1,0 +1,24 @@
+foods =[]
+prices = []
+total = 0
+
+while True:
+    food = input(f"enter a food you like (q to quit): ").capitalize()
+    if food.lower() == "q":
+        break
+    if food == "":
+        print("please enter a food you like (q to quit): ")
+
+    else:
+        price = float(input("enter the price: "))
+        foods.append(food)
+        prices.append(price)
+print()
+print("--------The total cart value-------")
+for food in foods:
+    print(f"{food:10} {price}")
+
+for price in prices:
+    total += price
+
+print(f"The total price {total}")
